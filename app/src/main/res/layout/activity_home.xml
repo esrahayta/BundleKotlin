@@ -5,15 +5,83 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeActivity">
-
-    <TextView
-            android:layout_width="wrap_content"
+        android:id="@+id/AnaCons">
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:layout_width="match_parent"
+            android:background="@color/logincolor">
+        <android.support.v7.widget.Toolbar
+                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/right"
+                        android:id="@+id/imageView1"
+                        app:layout_constraintBottom_toTopOf="@+id/textView1"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/login"
+                          android:textSize="25sp"
+                          android:id="@+id/textView1"
+                          android:gravity="center"
+                          android:fontFamily="@font/roboto_bold" android:textColor="@android:color/black"
+                          tools:layout_editor_absoluteY="50dp" tools:layout_editor_absoluteX="62dp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <View
+        android:id="@+id/golge"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/golge"></View>
+        <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable" app:tabIndicatorColor="@android:color/holo_red_dark"
+                app:tabTextColor="@android:color/black" app:tabTextAppearance="@style/TextAppearance.AppCompat">
+            <android.support.design.widget.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/tab1"/>
+            <android.support.design.widget.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/tab2"/>
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+    
+    <android.support.v4.view.ViewPager 
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            android:id="@+id/loginView"
+    >
+        
+    </android.support.v4.view.ViewPager>
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/dark_border_bottom"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginView"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@color/white"
+            >
+
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
 </android.support.constraint.ConstraintLayout>
