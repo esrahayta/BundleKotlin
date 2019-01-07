@@ -3,14 +3,14 @@
 
     <item
             android:id="@+id/home"
-            android:icon="@drawable/home"
+            android:icon="@drawable/homee"
             android:title="">
 
     </item>
 
     <item
             android:id="@+id/discover"
-            android:icon="@drawable/discover"
+            android:icon="@drawable/discoverr"
             android:title=""
     >
 
@@ -18,14 +18,14 @@
 
     <item
             android:id="@+id/search"
-            android:icon="@drawable/search2"
+            android:icon="@drawable/searchh"
             android:title="">
 
     </item>
 
     <item
             android:id="@+id/profile"
-            android:icon="@drawable/profile"
+            android:icon="@drawable/profill"
             android:title="">
 
     </item>
